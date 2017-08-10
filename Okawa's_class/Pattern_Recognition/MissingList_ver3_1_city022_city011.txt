@@ -1,0 +1,14 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+   KUNITACHI	 | 	  MARUNOUCHI
+       HONJO	 | 	      MEJIRO
+     BUNKYOO	 | 	     TOOKYOO
+      BOOSOO	 | 	     TOOKYOO
+    NYAKUSEI	 | 	       BEPPU
+      NYORAI	 | 	     KOGANEI
+     JOOETSU	 | 	       YAESU
+      BYOOIN	 | 	       RUMOI
+      PYUUMA	 | 	      GYUUBA
+
+認識率は  91%です

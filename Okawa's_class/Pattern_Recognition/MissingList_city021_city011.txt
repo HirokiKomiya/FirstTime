@@ -1,0 +1,22 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+   KUNITACHI	 | 	  MARUNOUCHI
+       SENJU	 | 	     TENRYUU
+   SOSHIGAYA	 | 	  ZOOSHIGAYA
+    ROPPONGI	 | 	  DOOTONBORI
+      WASEDA	 | 	     YOTSUYA
+       GINZA	 | 	   SHINAGAWA
+  BAKUROCHOO	 | 	     TOOKYOO
+     BUNKYOO	 | 	     TOOKYOO
+      BOOSOO	 | 	     TOOKYOO
+    CHANPION	 | 	     TENRYUU
+      NYORAI	 | 	       RUMOI
+      GYOODA	 | 	     EDOGAWA
+        JARI	 | 	       RUMOI
+     JOOETSU	 | 	       YAESU
+      BYOOIN	 | 	       RUMOI
+    HAPPYAKU	 | 	    HARAJUKU
+      PYUUMA	 | 	       GUNMA
+
+認識率は  83%です

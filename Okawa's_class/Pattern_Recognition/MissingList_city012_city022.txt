@@ -1,0 +1,19 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+      SUGAMO	 | 	        UENO
+     TENRYUU	 | 	       SENJU
+       RAUSU	 | 	        DATE
+       REBUN	 | 	       BIZEN
+      WASEDA	 | 	        DATE
+       GUNMA	 | 	   KESENNUMA
+  JIYUUGAOKA	 | 	     CHIYODA
+  ZOOSHIGAYA	 | 	   SOSHIGAYA
+ DENENCHOOFU	 | 	       BEPPU
+      PINPON	 | 	       BEPPU
+    PURIZUMU	 | 	       BIZEN
+   MYAKUHAKU	 | 	     RYAKUZU
+      GYUUBA	 | 	      PYUUMA
+    JUUMONJI	 | 	  KICHIJOOJI
+
+認識率は  86%です

@@ -1,0 +1,78 @@
+﻿2015/11/03 14:13:17 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "D:\share\WaveTest2\WaveTest2\WaveTest2.vcxproj" (build ターゲット)。
+     1>PrepareForBuild:
+         ディレクトリ "D:\share\WaveTest2\Release\" を作成しています。
+       InitializeBuildStatus:
+         "AlwaysCreate" が指定されたため "Release\WaveTest2.unsuccessfulbuild" を作成しています。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\vender\opengl\Release\include /I..\vender\fftw\include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt caluc_spec.cpp main.cpp plot_window.cpp
+         caluc_spec.cpp
+     1>caluc_spec.cpp(14): warning C4101: 'x' : ローカル変数は 1 度も使われていません。
+     1>caluc_spec.cpp(15): warning C4101: 'FileName' : ローカル変数は 1 度も使われていません。
+         main.cpp
+     1>main.cpp(16): warning C4101: 'i' : ローカル変数は 1 度も使われていません。
+     1>main.cpp(48): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 'fopen' の宣言を確認してください。
+     1>main.cpp(36): warning C4101: 'i' : ローカル変数は 1 度も使われていません。
+     1>main.cpp(37): warning C4101: 'data' : ローカル変数は 1 度も使われていません。
+     1>main.cpp(96): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+     1>main.cpp(104): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 'scanf' の宣言を確認してください。
+     1>main.cpp(72): warning C4101: 'rs' : ローカル変数は 1 度も使われていません。
+         plot_window.cpp
+     1>plot_window.cpp(25): warning C4244: '=' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>plot_window.cpp(65): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(66): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(67): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(68): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(69): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(70): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(71): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(72): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(73): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(74): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(75): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(94): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(95): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(96): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(97): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(98): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(99): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(100): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(101): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(102): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(103): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(104): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(105): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(106): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(107): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>plot_window.cpp(124): warning C4244: '引数' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>plot_window.cpp(125): warning C4244: '引数' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>plot_window.cpp(153): warning C4244: '=' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>plot_window.cpp(160): warning C4244: '=' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>plot_window.cpp(181): warning C4244: '=' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>plot_window.cpp(194): warning C4244: '=' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>plot_window.cpp(206): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 'fopen' の宣言を確認してください。
+     1>plot_window.cpp(212): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(253) : 'fscanf' の宣言を確認してください。
+     1>plot_window.cpp(213): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(253) : 'fscanf' の宣言を確認してください。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\share\WaveTest2\Release\WaveTest2.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\vender\opengl\Release\lib /LIBPATH:..\vender\fftw\lib "libfftw3-3.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\WaveTest2.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\share\WaveTest2\Release\WaveTest2.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\share\WaveTest2\Release\WaveTest2.lib" /MACHINE:X86 Release\caluc_spec.obj
+         Release\main.obj
+         Release\plot_window.obj
+         コード生成しています。
+     1>d:\share\wavetest2\wavetest2\caluc_spec.cpp(119): warning C4715: 'calc_sound_to_spec_houraku' : 値を返さないコントロール パスがあります。
+         コード生成が終了しました。
+         WaveTest2.vcxproj -> D:\share\WaveTest2\Release\WaveTest2.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\share\WaveTest2\Release\WaveTest2.exe;#1" /manifest Release\WaveTest2.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         ファイル "Release\WaveTest2.unsuccessfulbuild" を削除しています。
+         "Release\WaveTest2.lastbuildstate" のタッチ タスクを実行しています。
+     1>プロジェクト "D:\share\WaveTest2\WaveTest2\WaveTest2.vcxproj" (build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:01.99

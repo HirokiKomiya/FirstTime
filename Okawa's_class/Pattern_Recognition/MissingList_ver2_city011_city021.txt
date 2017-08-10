@@ -1,0 +1,11 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+      SUGAMO	 | 	        UENO
+      NERIMA	 | 	      HIBIYA
+       GUNMA	 | 	      NERIMA
+  ZOOSHIGAYA	 | 	   SOSHIGAYA
+      HYUUGA	 | 	      GYUUBA
+      GYOODA	 | 	     CHIYODA
+
+認識率は  94%です

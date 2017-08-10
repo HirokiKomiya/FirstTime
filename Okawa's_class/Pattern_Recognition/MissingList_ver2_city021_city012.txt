@@ -1,0 +1,8 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+       YAESU	 | 	       BEPPU
+       ZUSHI	 | 	     RISHIRI
+     JOOETSU	 | 	    RYOOGOKU
+
+認識率は  97%です

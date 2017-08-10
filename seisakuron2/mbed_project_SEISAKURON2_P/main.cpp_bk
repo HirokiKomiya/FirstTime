@@ -1,0 +1,261 @@
+#include "mbed.h"
+#include "Motor.h"
+#include "QEI.h"
+
+#define pwmtest 0
+
+//motor 日本サーボ　DMN29 12p/r
+//GEAR 12:80
+//wheel (O-Ring) 直径 51 mm
+
+//モーターのPWMは最低2kHz～5kHzに要変更
+
+BusOut led(LED1, LED2, LED3, LED4);
+AnalogIn pen(xp15);
+
+Ticker control;
+Ticker pen_controll;
+
+Serial pc(USBTX, USBRX);
+/*
+double left_map[]={0.0, 16.0, 23.0, 29.0, 35.0, 42.0, 49.0, 56.0, 59.0, 66.0, 74.0, 81.0, 88.0, 95.0};
+double right_map[]={0.0, 18.0, 25.0, 32.0, 39.0, 43.0, 46.0, 53.0, 60.0, 68.0, 75.0, 82.0, 85.0, 95.0};
+*/
+double left_map[]={0.0, 10.0, 15.0, 18.0, 21.0, 25.0, 29.0, 32.0, 35.0, 39.0, 41.0, 45.0, 46.0, 50.0 , 51.0, 51.0, 52.0, 52.0, 52.0, 53.0, 53.0, 55.0, 62.0, 69.0, 76.0, 82.0, 90.0, 100.0};
+double right_map[]={0.0, 14.0, 18.0, 20.0, 24.0, 28.0, 32.0, 34.0, 36.0, 38.0, 41.0, 45.0, 49.0, 51.0 , 54.0, 54.0, 56.0, 56.0, 56.0, 58.0, 58.0, 66.0, 72.0, 78.0, 84.0, 87.0, 95.0, 100.0};
+#if pwmtest==0
+Motor motor_left(MOTOR1_IN1, MOTOR1_IN2, MOTOR1_PWM);
+Motor motor_right(MOTOR2_IN1, MOTOR2_IN2, MOTOR2_PWM);
+#else
+//PWM test
+Motor motor_left(MOTOR1_IN1, MOTOR1_IN2, MOTOR1_PWM);
+Motor motor_right(MOTOR2_IN1, MOTOR2_IN2, MOTOR2_PWM);
+#endif
+////////////////
+
+BusIn in(GPIO1, GPIO2, GPIO3, GPIO4);
+
+QEI qei_left(GPIO1, GPIO2, NC, 48, QEI::X4_ENCODING);
+QEI qei_right(GPIO3, GPIO4, NC, 48, QEI::X4_ENCODING);
+
+//double speed_left_ref = 0.2, speed_right_ref = 0.2;
+double speed_left_ref = 0.5, speed_right_ref = 0.5;
+double last_speed_left_ref , last_speed_right_ref;
+double speed_left_lpf = 0.0, speed_right_lpf = 0.0;
+const double sampling_time = 0.020;
+const double move_per_pulse = 0.0005;
+double i_left = 0.0, i_right = 0.0;
+double ki = 0.0, kp = 1.5;
+
+double FF_left_val(double x){
+	if (abs(x) > 0.1){
+		if (x > 0.0)	return (27.71*x) + 10.234;
+		else	return (27.71*x) - 10.234;
+	}
+	return 0;
+}
+
+double FF_right_val(double x){
+	if(abs(x) > 0.1){
+		if (x > 0.0) return ((29.913 * x) + 10.913) * -1.0;
+		else return (29.913 * x* -1.0) + 10.913;
+	}
+	return 0;
+}
+
+int enc_left;
+int enc_right;
+
+double pre_left_val, pre_right_val;
+double left_val, right_val;
+
+double low_pass_filter(double val, double pre_val, double gamma) {
+return gamma * pre_val + (1.0 - gamma) * val;
+}
+#if pwmtest==0
+void control_handler() {
+
+	enc_left = qei_left.getPulses();
+	enc_right = qei_right.getPulses();
+
+	qei_left.reset();
+	qei_right.reset();
+
+	double speed_left = move_per_pulse * enc_left / sampling_time;
+	double speed_right = move_per_pulse * enc_right / sampling_time;
+	/*
+	speed_left_lpf = low_pass_filter(speed_left, speed_left_lpf, 0.4);
+	speed_right_lpf = low_pass_filter(speed_right, speed_right_lpf, 0.4);
+
+	double delta_speed_left = speed_left_ref - speed_left_lpf;
+	double delta_speed_right = -speed_right_ref - speed_right_lpf;
+*/
+	double delta_speed_left = speed_left_ref - enc_left;
+	double delta_speed_right = -speed_right_ref - enc_right;
+	
+	
+	if(speed_left_ref != last_speed_left_ref) {
+		if(speed_left_ref < 0.0) pre_left_val = left_map[abs((int)(speed_left_ref*10))] *-1;
+		else pre_left_val = left_map[abs((int)speed_left_ref)] * 1;
+	}
+	
+	if(speed_right_ref != last_speed_right_ref){
+		if(speed_right_ref > 0.0) pre_right_val = right_map[abs((int)(speed_right_ref*10)) ] * -1;
+		else pre_right_val = right_map[abs((int)speed_right_ref)] * 1;
+	}
+	
+	
+	
+	last_speed_left_ref = speed_left_ref;
+	last_speed_right_ref = speed_right_ref;
+	
+	
+	i_left += delta_speed_left * sampling_time;
+	i_right += delta_speed_right * sampling_time;
+	
+	//left_val =  delta_speed_left*kp + pre_left_val + FF_left_val(speed_right_ref);
+	//right_val =  delta_speed_right*kp + pre_right_val + FF_right_val(speed_right_ref);
+	
+	left_val =  delta_speed_left*kp + pre_left_val;
+	right_val =  delta_speed_right*kp + pre_right_val;
+	
+	if(left_val > 100) left_val = 100;
+	if(right_val > 100) right_val = 100;
+	
+	if(left_val < -100) left_val = -100;
+	if(right_val < -100) right_val = -100;
+	
+	pre_left_val = left_val;
+	pre_right_val = right_val;
+	
+	/*
+	motor_left = kp * delta_speed_left + ki * i_left;
+	motor_right = kp * delta_speed_right + ki * i_right;
+	*/
+	motor_left = left_val/100.0;
+	motor_right = right_val/100.0;
+}
+#endif
+
+double pen_val, last_pen_val;
+double goal_pen_val = 2108;
+double diff, d_diff, integ_diff;
+double last_enc;
+
+double speed, last_speed;
+double pen_kp = 0.265, pen_ki = 0.0006, pen_kd = 0.0003;
+//double pen_kp  = 0.011, pen_ki = 0.00003, pen_kd = 0.00001;
+	
+void pen_control_handler(){
+	pen_val = pen.read_u16()>>4;
+	
+	diff = goal_pen_val - pen_val;
+	d_diff = - (pen_val - last_pen_val);
+	
+	speed = (diff * pen_kp) + (integ_diff * pen_ki) + (d_diff * pen_kd);
+	//speed = speed + last_speed;
+	
+	if( speed > 2.7) speed = 27;
+	if( speed < -2.7) speed = -2.7;
+	
+	speed_left_ref = speed;
+	speed_right_ref = speed;
+	
+	integ_diff += diff;
+	last_speed = speed;
+	last_pen_val = pen_val;
+	
+}
+int main() {
+	in.mode(PullUp);
+#if pwmtest==0
+	motor_left.setMaxRatio(1.0);
+	motor_right.setMaxRatio(1.0);
+	//control.attach(&control_handler, sampling_time);
+	control.attach(&control_handler, 0.001);
+	pen_controll.attach(&pen_control_handler, 0.002);
+#endif
+	led = 1;
+	
+#if pwmtest
+	motor_left = 0.5;
+	motor_right = 0.5;
+#endif
+	
+	wait(1);
+	//goal_pen_val = pen.read_u16()>>4;
+	
+	while(1){
+		led = (led << 1) | (led == 0x08);
+		//printf("ref:%2.2f \t kp:%2.2f \t pen : %d \t left:%d \t right:%d",speed_left_ref, kp, pen.read_u16()>>4 ,enc_left, enc_right);
+		//printf("\t left_m:%3.2f \t right_m:%3.2f\n", left_val, right_val);
+		
+		printf("pen:%3.1f (abs:%d) \t sp:%2.2f \t kp:%.3f\tki:%.5f\tkd:%.5f \n",diff, pen.read_u16()>>4 ,speed_left_ref,pen_kp,pen_ki,pen_kd);
+
+		
+		while(pc.readable()){
+			char buf = pc.getc();
+			
+			switch(buf){
+				case 'w':
+						speed_left_ref = speed_left_ref + 0.1;
+						speed_right_ref = speed_right_ref + 0.1;
+						break;
+				
+				case 's':
+						speed_left_ref = speed_left_ref - 0.1;
+						speed_right_ref = speed_right_ref - 0.1;
+						break;
+				
+				case 'e':
+					kp = kp+0.1;
+					break;
+				
+				case 'd':
+					kp = kp-0.1;
+					break;
+				
+				case 't':
+					pen_kp = pen_kp+0.001;
+					break;
+				
+				case 'g':
+					pen_kp = pen_kp-0.001;
+					break;
+				
+				case 'y':
+					pen_ki = pen_ki+0.00001;
+					break;
+				
+				case 'h':
+					pen_ki = pen_ki-0.00001;
+					break;
+				
+				case 'u':
+					pen_kd = pen_kd+0.00001;
+					break;
+				
+				case 'j':
+					pen_kd = pen_kd-0.00001;
+					break;
+				
+				case 'i':
+					integ_diff = 0.0;
+					break;
+				
+				case 'k':
+					goal_pen_val = pen.read_u16()>>4;
+					break;
+				
+						case ',':
+					goal_pen_val++;
+					break;
+				
+				case '.':
+					goal_pen_val--;
+					break;
+			}
+		}
+		wait(0.5);
+	}
+}

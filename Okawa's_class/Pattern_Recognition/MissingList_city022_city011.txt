@@ -1,0 +1,19 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+   KUNITACHI	 | 	  MARUNOUCHI
+      SUGAMO	 | 	      HYOOGO
+   SOSHIGAYA	 | 	  ZOOSHIGAYA
+       HONJO	 | 	      MEJIRO
+       YAESU	 | 	       BEPPU
+       GINZA	 | 	   SHINAGAWA
+  BAKUROCHOO	 | 	     TOOKYOO
+     BUNKYOO	 | 	     TOOKYOO
+      BOOSOO	 | 	     TOOKYOO
+    CHANPION	 | 	     TENRYUU
+      NYORAI	 | 	     KOGANEI
+    JUUMONJI	 | 	       RUMOI
+      BYOOIN	 | 	       RUMOI
+      PYUUMA	 | 	      GYUUBA
+
+認識率は  86%です

@@ -1,0 +1,11 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+   KUNITACHI	 | 	  MARUNOUCHI
+       GINZA	 | 	   SHINAGAWA
+       ZUSHI	 | 	     RISHIRI
+     NYUUZEN	 | 	       BIZEN
+     RYAKUZU	 | 	       BEPPU
+      PYUUMA	 | 	      GYUUBA
+
+認識率は  94%です

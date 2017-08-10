@@ -1,0 +1,8 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+     BUNKYOO	 | 	       HONJO
+      GYOODA	 | 	     CHIYODA
+      PYUUMA	 | 	      HYUUGA
+
+認識率は  97%です

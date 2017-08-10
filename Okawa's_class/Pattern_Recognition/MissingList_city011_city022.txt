@@ -1,0 +1,21 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+      SUGAMO	 | 	        UENO
+     TENRYUU	 | 	       SENJU
+       RAUSU	 | 	        DATE
+       GUNMA	 | 	      PYUUMA
+  JIYUUGAOKA	 | 	     CHIYODA
+       ZUSHI	 | 	     TSUKIJI
+      BOOSOO	 | 	       TAKAO
+    PURIZUMU	 | 	       SENJU
+      POPURA	 | 	      NOGATA
+      NYORAI	 | 	      GYANGU
+      HYUUGA	 | 	      PYUUMA
+      HYOOGO	 | 	       TAKAO
+   MYAKUHAKU	 | 	   HYAKKATEN
+      GYUUBA	 | 	     CHIYODA
+      GYOODA	 | 	     CHIYODA
+    JUUMONJI	 | 	  KICHIJOOJI
+
+認識率は  84%です

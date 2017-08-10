@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+/*main(){
+	int data=99;
+	printf("dataの数値:%d\n",data);
+	printf("dataのアドレス:%d\n",&data);
+}*/
+
+main(){
+	int data;
+	int *p;		//int型のアドレスを記憶するポインタ変数
+	int test;
+	data = 99;
+	p = &data;
+	test = &data;
+	printf("dataの数値:%d",data);
+	printf("dataのアドレス:%d\n",&data);
+	printf("ポインタ変数pの値:%d\n",p);
+	printf("ポインタ変数pのアドレス値:%d\n",&p);
+	printf("testの値:%d\n",test);
+}

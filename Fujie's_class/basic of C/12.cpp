@@ -1,0 +1,17 @@
+/*4.2B*/
+
+#include<stdio.h>
+
+main()
+{
+	int a,b;
+	b++;
+	
+	scanf("%d",&a);
+	
+	while(a % b == 0){
+		printf("%d ÇÕëfêîÇ≈ÇÕÇ»Ç¢" ,a);
+		if(a == b);
+		break
+	}
+}

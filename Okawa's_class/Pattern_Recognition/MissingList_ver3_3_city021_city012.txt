@@ -1,0 +1,7 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+      GYUUBA	 | 	      HYUUGA
+      PYUUMA	 | 	      HYUUGA
+
+認識率は  98%です

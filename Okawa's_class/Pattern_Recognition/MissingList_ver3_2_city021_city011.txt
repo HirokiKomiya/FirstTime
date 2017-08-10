@@ -1,0 +1,16 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+      NERIMA	 | 	       GUNMA
+       RAUSU	 | 	       YAESU
+  BAKUROCHOO	 | 	     TOOKYOO
+      BOOSOO	 | 	     TOOKYOO
+      PINPON	 | 	      GENKAI
+      HYUUGA	 | 	      GYUUBA
+      GYUUBA	 | 	      HYUUGA
+      GYOODA	 | 	      HYUUGA
+     JOOETSU	 | 	      GYANGU
+      BYOOIN	 | 	       RUMOI
+      PYUUMA	 | 	      HYUUGA
+
+認識率は  89%です

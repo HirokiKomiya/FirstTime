@@ -1,0 +1,96 @@
+﻿2017/08/06 9:33:37 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\raguna\Documents\C\WaveTest2-ver2\WaveTest2.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\vender\fftw\include /I..\vender\opengl\Debug\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt plot_window.cpp
+         plot_window.cpp
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(31): warning C4244: '=' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(64): warning C4244: '引数' : 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(79): warning C4244: '引数' : 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(94): warning C4244: '引数' : 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(110): warning C4244: '引数' : 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(126): warning C4244: '引数' : 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(142): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(143): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(144): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(145): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(146): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(147): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(148): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(149): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(150): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(151): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(152): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(153): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(154): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(155): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(156): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(157): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(158): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(159): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(160): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(161): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(162): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(163): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(182): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(183): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(184): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(185): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(186): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(187): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(188): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(189): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(190): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(191): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(192): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(193): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(194): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(195): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(212): warning C4244: '引数' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(213): warning C4244: '引数' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(452): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(453): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(454): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(455): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(456): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(457): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(459): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(460): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(461): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(462): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(463): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(465): warning C4244: '引数' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(466): warning C4244: '引数' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(467): warning C4244: '引数' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(468): warning C4244: '引数' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(469): warning C4244: '引数' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(471): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(472): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(509): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(510): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(511): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(512): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(513): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(514): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(515): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(516): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(517): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(518): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(519): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(520): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(521): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(522): warning C4305: '引数' : 'double' から 'float' へ切り詰めます。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(553): warning C4244: '=' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(560): warning C4244: '=' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(581): warning C4244: '=' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(596): warning C4244: '=' : 'double' から 'float' への変換です。データが失われる可能性があります。
+     1>c:\users\raguna\documents\c\wavetest2-ver2\plot_window.cpp(629): warning C4244: '=' : 'double' から 'char' への変換です。データが失われる可能性があります。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\raguna\Documents\C\WaveTest2-ver2\Debug\WaveTest2.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\vender\fftw\lib /LIBPATH:..\vender\opengl\Debug\lib "libfftw3-3.lib" winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\raguna\Documents\C\WaveTest2-ver2\Debug\WaveTest2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\raguna\Documents\C\WaveTest2-ver2\Debug\WaveTest2.lib" /MACHINE:X86 Debug\caluc_spec.obj
+         Debug\main.obj
+         Debug\plot_window.obj
+         WaveTest2.vcxproj -> C:\Users\raguna\Documents\C\WaveTest2-ver2\Debug\WaveTest2.exe
+     1>プロジェクト "C:\Users\raguna\Documents\C\WaveTest2-ver2\WaveTest2.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:07.86

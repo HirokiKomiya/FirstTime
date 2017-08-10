@@ -1,0 +1,30 @@
+以下、あくまで参考程度に。
+
+
+(1)、(2)ドライブのプログラムでどうにかなると思う。
+
+(3)単語ごと
+1.NL_2_2を使ってデータを変換(変換後のファイル名前はNoMarkSample)
+2.PC>cygwin64>home>アカウント名　にファイルを移動。
+3.cygwinを起動し以下を入力
+cat ファイル名 | tr " " "\n" | sort | uniq -c | sort -nr | head -個数
+
+(例) cat NoMarkSample.txt | tr ' ' '\n' | sort | uniq -c | sort -nr | head -40
+
+
+(4)2文字ごと
+1.2.は共通
+3.cygwinを起動し以下を入力
+cat ファイル | tr " " "\n" | fold -s2 | sort | uniq -c | sort -nr | head -個数
+
+(例)
+cat NoMarkSample.txt | tr ' ' '\n' | fold -s2 | sort | uniq -c | sort -nr | head -40
+
+
+(5)3文字
+(前略)以下を入力
+cat ファイル | tr " " "\n" | fold -s3 | sort | uniq -c | sort -nr | head -個数
+
+
+以上、空白は2連続のみをカウント。
+通常の英文で空白2連はありえない→bcPadでのカウントからこの値を引く

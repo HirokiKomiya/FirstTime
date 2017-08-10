@@ -1,0 +1,49 @@
+
+The 3rd Project: Robo-Kick Simulator
+
+課題：OpenGL/GLUTを使って、２次元Robo-Kick のシミュレータを作成すること
+
+ --> 電卓のプログラムとアドレス帳のプログラムの基本要求は完全に自分で出来たことは前提
+
+
+◎まずやること
+
+Robo-Kick シミュレータステップ１： 転がるボールをシミュレーションし、表示する
+?sample3.cをダウンロード実行し、内容とある程度理解する(マウスの左ボタンと右ボタンをクリックしてみる)
+
+
+?Sub-Project 1:　正方形を横に移動できるようにする 
+
+
+?Sub-Project 2:　多角形の端点を追加しを円近付く（３６端点）・・・OK
+
+?Sub-Project 3:　床の線を引き、ボールを床の上に転がすことをシミュレーションする（注意：接地点を滑べらないようにすること）
+
+
+?Sub-Project 4:　床の両端壁を作り、ボールが壁に接触したら、止まったり、逆方向に移動することことをシミュレーションする 
+
+自習材料： 
+?OpenGL Utility Toolkit日本語解説http://opengl.jp/glut
+?Open GL日本語解説: http://www.komoto.org/opengl 
+?床井先生のGLUTによる「手抜き」OpenGL入門
+?OpenGL Orghttp://www.opengl.org/
+
+
+これからの課題
+
+Robo-Kick シミュレータステップ２： 地面や壁にバンシングするボールをシミュレーションし、表示する
+
+
+
+Robo-Kick シミュレータステップ３： ボールを蹴る足をシミュレーションし、表示する
+
+
+
+Robo-Kick シミュレータステップ４： ボールを蹴る動作および足の制御部をシミュレーションし、表示する
+
+
+
+Robo-Kick シミュレータステップ５： ダイナミックスや接触・衝突のモデル向上、予想軌道の提示、3Dへの拡張 
+
+
+ZD.Wang, The Dept. of Advanced Robotics, IT-Chiba 

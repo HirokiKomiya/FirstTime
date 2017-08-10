@@ -1,0 +1,8 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+    NYAKUSEI	 | 	       BEPPU
+      GYANGU	 | 	      CHUUBU
+      GYOODA	 | 	     CHIYODA
+
+認識率は  97%です

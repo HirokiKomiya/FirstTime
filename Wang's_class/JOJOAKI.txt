@@ -1,0 +1,649 @@
+/*“o˜^‚Æ‰{——*/
+
+#include<stdio.h>
+#include<string.h>
+
+struct person{
+	char	name[40];
+	char	address[100];
+	long	phone;
+};
+
+
+int main(void)
+{
+	struct person student[100];
+	int mode, l, i = 0, n = 1;
+	int lan = 0;
+	
+	FILE  *fp, *pw;
+	char  filename[] = "data_test.txt";
+	
+	char  pass[100];
+	char  type[100];
+	char  Npass[100] = "NewPass";
+	char  Cpass[100];
+	
+	int   key = 0;
+	int   k = 0;
+	int   end = 0;
+	
+	char  str1[100]  = {'\0'};
+	char  str2[40]   = "name";
+	long  str3       = {'\0'};
+	char  str4[100]  = {'\0'}; //(‰¼)
+	char  str5[40]   = {'\0'}; //(‰¼)
+	long  str6       = {'\0'}; //(‰¼)
+	
+	printf("“o˜^‚Æ ‰{——\n\n");
+	
+	printf("y English:1 “ú–{Œê:2 ’†‘:3 z\n");
+	printf("Language:");
+	scanf("%d", &lan);
+	
+	for(k=0;k<4;k++){
+		pw = fopen("password.txt", "r");
+		fscanf(pw, "%s", pass);
+		
+		switch(lan){
+			case 1:
+				printf("\n***y NewPass zChange Password Key ***\n\n");
+				printf("Password:");
+			break;
+			
+			case 2:
+				printf("\n***y NewPass zƒpƒXƒ[ƒh•ÏXƒL[ ***\n\n");
+				printf("ƒpƒXƒ[ƒh:");
+			break;
+			
+			case 3:
+				printf("\n***y NewPass z–¨áùX‰üŠÖŒ® ***\n\n");
+				printf("–¨áù:");
+			break;
+			
+			default:
+				printf("\n***y NewPass zChange Password Key ***\n\n");
+				printf("Password:");
+			break;
+		}
+		
+		scanf("%s", &type);
+		
+		if(strcmp(pass, type)==0){//ƒpƒXƒ[ƒh“ü—Í
+			switch(lan){
+				case 1:
+					printf("\n\ná  H E L L O  â\n\n");
+				break;
+				
+				case 2:
+					printf("\n\ná  ‚æ ‚¤ ‚± ‚»  â\n\n");
+				break;
+				
+				case 3:
+					printf("\n\ná  Š½ Œ}   â\n\n");
+				break;
+				
+				default:
+					printf("\n\ná  H E L L O  â\n\n");
+				break;
+			}
+			
+			key = 1;
+			k = 5;
+		}else if(strcmp(Npass, type)==0){//V‹KƒpƒXƒ[ƒh
+			//‹ŒƒpƒXƒ[ƒhŠm”F
+			switch(lan){
+				case 1:
+					printf("\nOld Password:");
+				break;
+				
+				case 2:
+					printf("\n‹ŒƒpƒXƒ[ƒh:");
+				break;
+				
+				case 3:
+					printf("\n‹Œ–¨áù:");
+				break;
+				
+				default:
+					printf("\nOld Password:");
+				break;
+			}
+			
+			scanf("%s", &type);
+			//Šm”FŠ®—¹
+			if(strcmp(pass, type)==0){
+				fclose(pw);
+				pw = fopen("password.txt", "w");
+				
+				switch(lan){
+					case 1:
+						printf("\n***y NewPass zNot Available! ***\n\n");
+						printf("New Password:");
+					break;
+					
+					case 2:
+						printf("\n***y NewPass z‚ÍƒpƒXƒ[ƒh‚Ég—p‚Å‚«‚È‚¢ ***\n\n");
+						printf("VƒpƒXƒ[ƒh:");
+					break;
+					
+					case 3:
+						printf("\n***y NewPass z›€•s”\İ–§áù’†g—p! ***\n\n");
+						printf("V–§áù:");
+					break;
+					
+					default:
+						printf("\n***y NewPass zNot Available! ***\n\n");
+						printf("New Password:");
+					break;
+				}
+				
+				scanf("%s", &pass);
+				
+				switch(lan){
+					case 1:
+						printf("\nConfirm Password:");
+					break;
+					
+					case 2:
+						printf("\nŠm”FƒpƒXƒ[ƒh:");
+					break;
+					
+					case 3:
+						printf("\nŠm”F–¨áù:");
+					break;
+					
+					default:
+						printf("\nOld Password:");
+					break;
+				}
+				
+				scanf("%s", &Cpass);
+				
+				if(strcmp(Cpass, pass)==0){
+					switch(lan){
+						case 1:
+							printf("\ná Complete â\n");
+						break;
+						
+						case 2:
+							printf("\ná “o˜^Š®—¹ â\n");
+						break;
+						
+						case 3:
+							printf("\ná ’ûŠ®—¹ â\n");
+						break;
+						
+						default:
+							printf("\ná Complete â\n");
+						break;
+					}
+					
+					fprintf(pw, "%s", pass);
+					k = 0;
+				}else{
+					//O‰ñ¸”s‚·‚é‚ÆI—¹
+					switch(lan){
+						case 1:
+							printf("\ná Different â\n");
+						break;
+						
+						case 2:
+							printf("\ná Šm”F‚Å‚«‚Ü‚¹‚ñ â\n");
+						break;
+						
+						case 3:
+							printf("\ná –³–@æš›‰ â\n");
+						break;
+						
+						default:
+							printf("\ná Different â\n");
+						break;
+					}
+					
+					
+				}
+			//Šm”F•s³
+			}else{
+				switch(lan){
+					case 1:
+						printf("\ná Different â\n");
+					break;
+					
+					case 2:
+						printf("\ná Šm”F‚Å‚«‚Ü‚¹‚ñ â\n");
+					break;
+					
+					case 3:
+						printf("\ná –³–@æš›‰ â\n");
+					break;
+					
+					default:
+						printf("\ná Different â\n");
+					break;
+				}
+			}
+			
+		}else{
+			switch(k){
+				case 0:
+					switch(lan){
+						case 1:
+							printf("\n\n@ @@QQQQ@\n@@^@    \   _\n@^ ƒm@@ ( œ)@_\n b@( œ)@@@Ü  |\n b@@i__ƒmP@@ /@Who are U?-3-\n b@@@@@@@  /\n@_Q@@@¼R¿_\n@@@/L@@(,Q_._\n@ @/   @@ _Qƒm\n\n");
+						break;
+						
+						case 2:
+							printf("\n\n@ @@QQQQ@\n@@^@    \   _\n@^ ƒm@@ ( œ)@_\n b@( œ)@@@Ü  |\n b@@i__ƒmP@@ /@‚Ç‚¿‚ç—l‚Å‚·‚©?-3-\n b@@@@@@@  /\n@_Q@@@¼R¿_\n@@@/L@@(,Q_._\n@ @/   @@ _Qƒm\n\n");
+						break;
+						
+						case 3:
+							printf("\n\n@ @@QQQQ@\n@@^@    \   _\n@^ ƒm@@ ( œ)@_\n b@( œ)@@@Ü  |\n b@@i__ƒmP@@ /@’N?-3-\n b@@@@@@@  /\n@_Q@@@¼R¿_\n@@@/L@@(,Q_._\n@ @/   @@ _Qƒm\n\n");
+						break;
+						
+						default:
+							printf("\n\n@ @@QQQQ@\n@@^@    \   _\n@^ ƒm@@ ( œ)@_\n b@( œ)@@@Ü  |\n b@@i__ƒmP@@ /@Who are U?-3-\n b@@@@@@@  /\n@_Q@@@¼R¿_\n@@@/L@@(,Q_._\n@ @/   @@ _Qƒm\n\n");
+						break;
+					}
+					
+				break;
+				
+				case 1:
+					switch(lan){
+						case 1:
+							printf("\n\n@@   ^PPPP_\n@  ^@„Ÿ@@  „Ÿ  _\n  ^@ iœj@ iœj_  Are U fooling me?-2-\n |@@@ i__l__j     |\n  _@@@ M ÜL@@^\n ^@@@@@@@     _\n");
+						break;
+						
+						case 2:
+							printf("\n\n@@   ^PPPP_\n@  ^@„Ÿ@@  „Ÿ  _\n  ^@ iœj@ iœj_  ‚¿‚å‚Á‚ÆŠ¨•Ù‚µ‚Ä‚­‚¾‚³‚¢‚æ... -2-\n |@@@ i__l__j     |\n  _@@@ M ÜL@@^\n ^@@@@@@@     _\n");
+						break;
+						
+						case 3:
+							printf("\n\n@@   ^PPPP_\n@  ^@„Ÿ@@  „Ÿ  _\n  ^@ iœj@ iœj_  Y›õ¥ö“I?-2-\n |@@@ i__l__j     |\n  _@@@ M ÜL@@^\n ^@@@@@@@     _\n");
+						break;
+						
+						default:
+							printf("\n\n@@   ^PPPP_\n@  ^@„Ÿ@@  „Ÿ  _\n  ^@ iœj@ iœj_  Are U fooling me?-2-\n |@@@ i__l__j     |\n  _@@@ M ÜL@@^\n ^@@@@@@@     _\n");
+						break;
+					}
+					
+				break;
+				
+				case 2:
+					switch(lan){
+						case 1:
+							printf("\n\n      _QQ__________\n@@^@@        @ _\n  ^@@@_ƒm@   RA__\n^ @@ iœj @iœj  |\n|@ @@ @ i__l__j@ |  Are U sillyH-1-\n /@@@@ ¿ƒm ½@   ^\n(@ _@^ Qƒm@|@|\n._@g@@^QQ|@|  \n@ _   ^  QQQ ^ \n");
+						break;
+						
+						case 2:
+							printf("\n\n      _QQ__________\n@@^@@        @ _\n  ^@@@_ƒm@   RA__\n^ @@ iœj @iœj  |\n|@ @@ @ i__l__j@ |  ‚¨„‚è‚³‚ñAŸ“z‚Å‚·B-1-\n /@@@@ ¿ƒm ½@   ^\n(@ _@^ Qƒm@|@|\n._@g@@^QQ|@|  \n@ _   ^  QQQ ^ \n");
+						break;
+						
+						case 3:
+							printf("\n\n      _QQ__________\n@@^@@        @ _\n  ^@@@_ƒm@   RA__\n^ @@ iœj @iœj  |\n|@ @@ @ i__l__j@ |  ‰ñŒÚ... -1-\n /@@@@ ¿ƒm ½@   ^\n(@ _@^ Qƒm@|@|\n._@g@@^QQ|@|  \n@ _   ^  QQQ ^ \n");
+						break;
+						
+						default:
+							printf("\n\n      _QQ__________\n@@^@@        @ _\n  ^@@@_ƒm@   RA__\n^ @@ iœj @iœj  |\n|@ @@ @ i__l__j@ |  Are U sillyH-1-\n /@@@@ ¿ƒm ½@   ^\n(@ _@^ Qƒm@|@|\n._@g@@^QQ|@|  \n@ _   ^  QQQ ^ \n");
+						break;
+					}
+					
+				break;
+			}
+		}
+		fclose(pw);
+	}
+	
+	while(key){
+		printf("\n\n");
+		printf("***************************************************************************\n");
+		printf("\n");
+		switch(lan){
+			case 1:
+				printf("y Writing:1 Reading:2 Serching:3 Delete:4 z\ny End:0 z \n\n");
+				printf("Select:");
+			break;
+			
+			case 2:
+				printf("y “o˜^:1 ‰{——:2 ŒŸõ:3 z\ny I—¹:0 z \n\n");
+				printf("‘I‘ğ:");
+			break;
+			
+			case 3:
+				printf("y ’èˆÊ:1 àgæT:2 r:3 z\ny Š®:0 z \n\n");
+				printf("‘I¢:");
+			break;
+			
+			default:
+				printf("y Writing:1 Reading:2 Serching:3 z\ny End:0 z \n\n");
+				printf("Select:");
+			break;
+		}
+		
+		scanf("%d", &mode);
+		
+		switch(mode){
+			//I—¹
+			case 0:
+				key = 0;
+				end = 1;
+			break;
+			//‘‚«‚İ
+			case 1:
+				l=1;
+				
+				switch(lan){
+					case 1:
+						printf("\náNew Accountâ\n\n");
+					break;
+					
+					case 2:
+						printf("\náV‹K“o˜^â\n\n");
+					break;
+					
+					case 3:
+						printf("\náV’ûâ\n\n");
+					break;
+					
+					default:
+						printf("\náNew Accountâ\n\n");
+					break;
+				}
+				
+				while(l){
+					fp = fopen(filename, "a");
+					
+					switch(lan){
+						case 1:
+							printf("name:");
+						break;
+						
+						case 2:
+							printf("–¼‘O:");
+						break;
+						
+						case 3:
+							printf("–½–¼:");
+						break;
+						
+						default:
+							printf("name:");
+						break;
+					}
+					
+					scanf("%s", &student[i].name);
+					
+					switch(lan){
+						case 1:
+							printf("address:");
+						break;
+						
+						case 2:
+							printf("ƒAƒhƒŒƒX:");
+						break;
+						
+						case 3:
+							printf("Zš¬:");
+						break;
+						
+						default:
+							printf("address:");
+						break;
+					}
+					
+					scanf("%s", &student[i].address);
+					
+					switch(lan){
+						case 1:
+							printf("phone number:");
+						break;
+						
+						case 2:
+							printf("“d˜b”Ô†:");
+						break;
+						
+						case 3:
+							printf("“d˜båjáù:");
+						break;
+						
+						default:
+							printf("phone number:");
+						break;
+					}
+					
+					scanf("%ld", &student[i].phone);
+					
+					fprintf(fp, "%s %s %ld\n", student[i].name, student[i].address, student[i].phone);
+					
+					fclose(fp);
+					
+					switch(lan){
+						case 1:
+							printf("\ny Countinue:1 End:0 z\n");
+							printf("Select:");
+						break;
+						
+						case 2:
+							printf("\ny “ü—Í‚ğ‘±‚¯‚é:1 I—¹:0 z\n");
+							printf("‘I‘ğ:");
+						break;
+						
+						case 3:
+							printf("\ny ‰„ã”:1 Š®:0 z\n");
+							printf("‘I¢:");
+						break;
+						
+						default:
+							printf("\ny Countinue:1 End:0 z\n");
+							printf("Select:");
+						break;
+					}
+					
+					scanf("%d", &l);
+					
+					i++;
+					
+					switch(lan){
+						case 1:
+							printf("\ná Complete â\n\n");
+						break;
+						
+						case 2:
+							printf("\ná “o˜^Š®—¹ â\n\n");
+						break;
+						
+						case 3:
+							printf("\ná ’ûŠ®—¹ â\n\n");
+						break;
+						
+						default:
+							printf("\ná Complete â\n\n");
+						break;
+					}
+					
+				}
+			break;
+			//‰{——
+			case 2:
+				switch(lan){
+					case 1:
+						printf("\ná Display â\n\n");
+					break;
+					
+					case 2:
+						printf("\ná ‰{—— â\n\n");
+					break;
+					
+					case 3:
+						printf("\ná àgæT â\n\n");
+					break;
+					
+					default:
+						printf("\ná Display â\n\n");
+					break;
+				}
+				
+				
+				fp = fopen(filename, "r");
+				
+				n=1;
+				
+				while(n){
+					fscanf(fp, "%s %s %ld", str1, str2, &str3);
+					
+					//“¯‚¶adress‚©‚Ç‚¤‚©”»’è
+					if(strcmp(str2, str5)==0){
+						n = 0;
+					}else{
+						printf("%s %s %ld\n", str1, str2, str3);
+					}
+					
+					strcpy(str2, str5);
+					
+				}
+				
+				fclose(fp);
+			break;
+			//ŒŸõ
+			case 3:
+				//nameŒŸõ
+				switch(lan){
+					case 1:
+						printf("Searching name:");
+					break;
+					
+					case 2:
+						printf("–¼‘OŒŸõ:");
+					break;
+					
+					case 3:
+						printf("–¼âiûõ:");
+					break;
+					
+					default:
+						printf("Searching name:");
+					break;
+				}
+				
+				scanf("%s", &str4);
+				
+				switch(lan){
+					case 1:
+						printf("\ná Result â\n\n");
+					break;
+					
+					case 2:
+						printf("\ná ŒŸõŒ‹‰Ê â\n\n");
+					break;
+					
+					case 3:
+						printf("\ná rõŒ‹‰Ê â\n\n");
+					break;
+					
+					default:
+						printf("\ná Result â\n\n");
+					break;
+				}
+				
+				fp = fopen(filename, "r");
+				
+				n=1;
+				
+				while(n){
+					fscanf(fp, "%s %s %ld", str1, str2, &str3);
+					
+					//str1‚Ì’†‚©‚çstr4‚É‚ ‚½‚éŒÂŠ‚ª‚ ‚é‚©ŒŸõ
+					if(strstr(str1, str4) != NULL){
+						printf("%s %s %ld\n", str1, str2, str3);
+						n = 0;
+						
+						
+					}else if(strcmp(str2, str5)==0){
+						switch(lan){
+							case 1:
+								printf("á None... â");
+							break;
+							
+							case 2:
+								printf("á ŠY“–‚È‚µ... â");
+							break;
+							
+							case 3:
+								printf("á •s“K—p... â");
+							break;
+							
+							default:
+								printf("á None... â");
+							break;
+						}
+						
+						n = 0;
+					}else{
+						n = 1;
+					}
+					
+					strcpy(str2, str5);
+					
+				}
+				
+				fclose(fp);
+			break;
+			
+			default:
+				switch(lan){
+					case 1:
+						printf("Error\n\n");
+					break;
+					
+					case 2:
+						printf("‘Î‰o—ˆ‚Ü‚¹‚ñ\n\n");
+					break;
+					
+					case 3:
+						printf("öŒë\n\n");
+					break;
+				}
+			break;
+		}
+	}
+	if(end == 1){
+		//³‹KI—¹
+		switch(lan){
+			case 1:
+				printf("\n	  @ ________\n@@@@@/@@@@@@_\n@ _@ ^ Ü           Ü_ \n@( | /   -==A       (œ)R  @Thank U for playingI \n@| |b   Ü    (_l_) Ü  | \n|P)R_         Rƒm     ƒm \n|P) | /@@      @@@_\n");
+			break;
+			
+			case 2:
+				printf("\n	  @ ________\n@@@@@/@@@@@@_\n@ _@ ^ Ü           Ü_ \n@( | /   -==A       (œ)R  @‚Ü‚½A‚¢‚Â‚Å‚àŠJ‚¢‚Ä‚­‚êI \n@| |b   Ü    (_l_) Ü  | \n|P)R_         Rƒm     ƒm \n|P) | /@@      @@@_\n");
+			break;
+			
+			case 3:
+				printf("\n	  @ ________\n@@@@@/@@@@@@_\n@ _@ ^ Ü           Ü_ \n@( | /   -==A       (œ)R  @ÓÓ, ÄŒ©I \n@| |b   Ü    (_l_) Ü  | \n|P)R_         Rƒm     ƒm \n|P) | /@@      @@@_\n");
+			break;
+			
+			default:
+				printf("\n	  @ ________\n@@@@@/@@@@@@_\n@ _@ ^ Ü           Ü_ \n@( | /   -==A       (œ)R  @Thank U for playingI \n@| |b   Ü    (_l_) Ü  | \n|P)R_         Rƒm     ƒm \n|P) | /@@      @@@_\n");
+			break;
+		}
+	}else{
+		//•s³I—¹
+		switch(lan){
+			case 1:
+				printf("     QQQQQ\n@ ^ @@@@  _\n ^@ „Ÿ @@ \ R@Overe the rainbow...\n|@i œj i œj\n|@@@i_l_j@ |\n _@@@@@@@^\n ^@@@@@@@R( :3\n @@@@@@@@(;@:3\n @@ i@@^Or PPi\n @@ l@ /@ ƒmAQƒm\n @@ l ^@@r @@l");
+			break;
+			
+			case 2:
+				printf("     QQQQQ\n@ ^ @@@@  _\n ^@ „Ÿ @@ \ R@‚¨‚Æ‚Æ‚¢—ˆ‚È\n|@i œj i œj\n|@@@i_l_j@ |\n _@@@@@@@^\n ^@@@@@@@R( :3\n @@@@@@@@(;@:3\n @@ i@@^Or PPi\n @@ l@ /@ ƒmAQƒm\n @@ l ^@@r @@l");
+			break;
+			
+			case 3:
+				printf("     QQQQQ\n@ ^ @@@@  _\n ^@ „Ÿ @@ \ R@‘Mà¡\n|@i œj i œj\n|@@@i_l_j@ |\n _@@@@@@@^\n ^@@@@@@@R( :3\n @@@@@@@@(;@:3\n @@ i@@^Or PPi\n @@ l@ /@ ƒmAQƒm\n @@ l ^@@r @@l");
+			break;
+			
+			default:
+				printf("     QQQQQ\n@ ^ @@@@  _\n ^@ „Ÿ @@ \ R@Overe the rainbow...\n|@i œj i œj\n|@@@i_l_j@ |\n _@@@@@@@^\n ^@@@@@@@R( :3\n @@@@@@@@(;@:3\n @@ i@@^Or PPi\n @@ l@ /@ ƒmAQƒm\n @@ l ^@@r @@l");
+			break;
+		}
+	}
+	
+	return 0;
+}

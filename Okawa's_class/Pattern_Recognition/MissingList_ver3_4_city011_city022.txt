@@ -1,0 +1,10 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+       GUNMA	 | 	   KESENNUMA
+      BOOSOO	 | 	     TOOKYOO
+      HYUUGA	 | 	      PYUUMA
+      GYUUBA	 | 	      PYUUMA
+      GYOODA	 | 	     EDOGAWA
+
+認識率は  95%です

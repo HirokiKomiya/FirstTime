@@ -1,0 +1,15 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+     TENRYUU	 | 	       SENJU
+      WASEDA	 | 	        DATE
+       GUNMA	 | 	        UENO
+  JIYUUGAOKA	 | 	     CHIYODA
+       ZUSHI	 | 	     RISHIRI
+     BUNKYOO	 | 	      PESUTO
+      PINPON	 | 	       BEPPU
+    PURIZUMU	 | 	       SENJU
+      HYUUGA	 | 	      PYUUMA
+      GYUUBA	 | 	      PYUUMA
+
+認識率は  90%です

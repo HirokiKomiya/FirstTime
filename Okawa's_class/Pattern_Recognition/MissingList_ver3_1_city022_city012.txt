@@ -1,0 +1,11 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+   KUNITACHI	 | 	  MARUNOUCHI
+       ZUSHI	 | 	     RISHIRI
+     BUNKYOO	 | 	       HONJO
+    NYAKUSEI	 | 	       BEPPU
+     NYUUZEN	 | 	       BIZEN
+      PYUUMA	 | 	      GYUUBA
+
+認識率は  94%です

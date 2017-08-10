@@ -1,0 +1,11 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+       YAESU	 | 	       BEPPU
+      BOOSOO	 | 	     TOOKYOO
+      GYOODA	 | 	     CHIYODA
+     JOOETSU	 | 	       BEPPU
+      BYOOIN	 | 	       RUMOI
+      PYUUMA	 | 	      HYUUGA
+
+認識率は  94%です

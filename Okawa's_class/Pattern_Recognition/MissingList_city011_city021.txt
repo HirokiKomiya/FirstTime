@@ -1,0 +1,15 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+      SUGAMO	 | 	        UENO
+      NERIMA	 | 	      HIBIYA
+       RAUSU	 | 	   MYAKUHAKU
+       GUNMA	 | 	      NERIMA
+  ZOOSHIGAYA	 | 	   SOSHIGAYA
+  BAKUROCHOO	 | 	      BOOSOO
+   MYAKUHAKU	 | 	       BEPPU
+      GYOODA	 | 	     CHIYODA
+    JUUMONJI	 | 	  KICHIJOOJI
+     JOOETSU	 | 	       YAESU
+
+認識率は  90%です

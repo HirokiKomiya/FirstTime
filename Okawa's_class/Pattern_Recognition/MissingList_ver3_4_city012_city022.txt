@@ -1,0 +1,10 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+     TENRYUU	 | 	       SENJU
+       GUNMA	 | 	   KESENNUMA
+       ZUSHI	 | 	     RISHIRI
+      GYUUBA	 | 	      PYUUMA
+      GYOODA	 | 	     EDOGAWA
+
+認識率は  95%です

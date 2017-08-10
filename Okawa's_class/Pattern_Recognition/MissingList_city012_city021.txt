@@ -1,0 +1,13 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+      NERIMA	 | 	      HIBIYA
+       REBUN	 | 	       BIZEN
+       GUNMA	 | 	   SHINAGAWA
+  ZOOSHIGAYA	 | 	   SOSHIGAYA
+      PINPON	 | 	       BEPPU
+      GYUUBA	 | 	     CHIYODA
+      GYOODA	 | 	     CHIYODA
+    JUUMONJI	 | 	  KICHIJOOJI
+
+認識率は  92%です

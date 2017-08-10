@@ -1,0 +1,12 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+       SENJU	 | 	     TENRYUU
+       RAUSU	 | 	       YAESU
+  BAKUROCHOO	 | 	     TOOKYOO
+      BOOSOO	 | 	     TOOKYOO
+      GYOODA	 | 	     CHIYODA
+     JOOETSU	 | 	  OCHANOMIZU
+      PYUUMA	 | 	      HYUUGA
+
+認識率は  93%です

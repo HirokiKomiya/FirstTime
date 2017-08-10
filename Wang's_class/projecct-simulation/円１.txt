@@ -1,0 +1,45 @@
+直径0.4の丸。
+直径あり。中心を決め、コンパスのように円を描いている
+
+#include <GL/glut.h>
+#include <math.h>
+#include <stdio.h>
+#define PI 3.141592
+
+int i=0;
+void display(void)
+{ 
+
+	float r = 0.4;		//直径
+	float x=0;			//中心
+	float y=0;			//座標
+	
+  glClear(GL_COLOR_BUFFER_BIT);
+  glBegin(GL_LINE_LOOP);
+  glVertex2d(x-r, y);		//
+  glVertex2d(x+r,y);		//(1.0 1.0)は画面の右上隅
+  
+ while(i<=36){
+  glVertex2d(x + r * cos((10*i)*PI/180), y + r * sin((10*i)*PI/180));
+  i++;
+  }
+  glEnd();
+  glFlush();
+}
+
+
+void init(void)
+{
+  glClearColor(0.0, 0.0, 1.0, 1.0);
+}
+
+int main(int argc, char *argv[])
+{
+  glutInit(&argc, argv);
+  glutInitDisplayMode(GLUT_RGBA);
+  glutCreateWindow(argv[0]);
+  glutDisplayFunc(display);
+  init();
+  glutMainLoop();
+  return 0;
+}

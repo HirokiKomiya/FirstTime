@@ -1,0 +1,120 @@
+#include "mbed.h"
+#include "QEI.h"
+#include "Motor.h"
+
+BusOut led(LED1, LED2, LED3, LED4);
+Motor motor_left(MOTOR1_IN1, MOTOR1_IN2, MOTOR1_PWM);
+Motor motor_right(MOTOR2_IN1, MOTOR2_IN2, MOTOR2_PWM);
+BusIn in(GPIO1, GPIO2, GPIO3, GPIO4);
+QEI qei_left(GPIO1, GPIO2, NC, 48, QEI::X4_ENCODING);
+QEI qei_right(GPIO5, GPIO6, NC, 48, QEI::X4_ENCODING);
+
+Ticker control;
+
+double speed_left_ref = 0.2, speed_right_ref = 0.2;
+double speed_left_lpf = 0.0, speed_right_lpf = 0.0;
+
+const double sampling_time = 0.020;
+const double move_per_pulse = 0.0005;
+
+double i_left = 0.0, i_right = 0.0;
+const double ki = 0.0, kp = 4.0;		// kpは比例ゲイン、kiは積分ゲイン
+
+int enc_left = qei_left.getPulses();
+int enc_right = qei_right.getPulses();
+
+int t;
+ double speed_left = move_per_pulse * enc_left / sampling_time;
+ double speed_right = move_per_pulse * enc_right / sampling_time;
+
+double low_pass_filter(double val, double pre_val, double gamma) {
+ return gamma * pre_val + (1.0 - gamma) * val;
+}  /*rは比率。(0<r<1)*/
+
+void control_handler() { 
+ int enc_left = qei_left.getPulses();
+ int enc_right = qei_right.getPulses();
+ qei_left.reset();
+ qei_right.reset();
+ speed_left_lpf = low_pass_filter(speed_left, speed_left_lpf, 0.4);
+ speed_right_lpf = low_pass_filter(speed_right, speed_right_lpf, 0.4);
+ double delta_speed_left = speed_left_ref - speed_left_lpf;
+ double delta_speed_right = speed_right_ref - speed_right_lpf;
+ i_left += delta_speed_left * sampling_time;
+ i_right += delta_speed_right * sampling_time;
+ motor_left = kp * delta_speed_left + ki * i_left;
+ motor_right = kp * delta_speed_right + ki * i_right; 
+} 
+
+double k=0.05;
+
+void gol(){
+		for(t=1;t<=86;t++){
+	speed_left_ref=k;
+	speed_right_ref=1.1*k;
+	wait(0.02);
+	}
+}
+
+void gos(){		//直進
+	for(t=1;t<=100;t++){
+	speed_left_ref=k;
+	speed_right_ref=-1.1*k;
+	wait(0.02);
+	}
+}
+
+void gosr(){			// 4分の1円
+for(t=1;t<=330;t++){
+	speed_left_ref=0;
+	speed_right_ref=-k;
+	wait(0.02);
+	}
+}
+
+void gosl(){		//半円
+for(t=1;t<=220;t++){
+	speed_left_ref=-k;
+	speed_right_ref=0;
+	wait(0.02);
+	}
+}
+
+void gosh(){		//直進
+	for(t=1;t<=30;t++){
+	speed_left_ref=k;
+	speed_right_ref=-1.1*k;
+	wait(0.02);
+	}
+}
+
+void gosb(){		//直進
+	for(t=1;t<=30;t++){
+	speed_left_ref=-k;
+	speed_right_ref=1.1*k;
+	wait(0.02);
+	}
+}
+
+int main(){
+	wait(2);
+	in.mode(PullUp);
+	motor_left.setMaxRatio(1.0);
+	motor_right.setMaxRatio(1.0);
+	control.attach(&control_handler, sampling_time);
+  led = 1; 
+	gos();
+	gos();
+	gos();
+	gol();
+	gosb();
+	gosl();
+	gosl();
+	gosb();
+	gosr();
+	gosr();
+	gosh();
+	speed_left_ref = 0.0;
+	speed_right_ref = 0.0;
+wait(0.5);
+}

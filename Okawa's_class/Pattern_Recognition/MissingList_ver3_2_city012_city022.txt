@@ -1,0 +1,10 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+       TAKAO	 | 	      NAKANO
+     TENRYUU	 | 	       SENJU
+       GUNMA	 | 	      NERIMA
+      GYUUBA	 | 	      PYUUMA
+      GYOODA	 | 	     EDOGAWA
+
+認識率は  95%です

@@ -1,0 +1,9 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+     TENRYUU	 | 	       SENJU
+       GUNMA	 | 	   KESENNUMA
+      GYUUBA	 | 	      PYUUMA
+      GYOODA	 | 	     EDOGAWA
+
+認識率は  96%です

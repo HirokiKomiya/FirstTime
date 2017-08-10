@@ -1,0 +1,10 @@
+　　　　　↓不正解リスト↓
+
+　　未知データ	 | 	　　既知データ
+      NERIMA	 | 	      HIBIYA
+       GUNMA	 | 	      NERIMA
+      GYUUBA	 | 	      HYUUGA
+      GYOODA	 | 	      NOGATA
+     JOOETSU	 | 	   MYAKUHAKU
+
+認識率は  95%です
